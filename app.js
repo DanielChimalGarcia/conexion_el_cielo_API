@@ -29,10 +29,10 @@ app.use("/api/log", require("./routes/log"));
 app.use("/api/rol", require("./routes/rol"));
 // Configura la conexión a MySQL
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "el_cielo3",
+  host: "buhymhakbwai119kskrw-mysql.services.clever-cloud.com",
+  user: "ux2q0dywdexzvkun",
+  password: "ZYqt2Ils1oUdDUdIbCDw",
+  database: "buhymhakbwai119kskrw",
 });
 
 // Conéctate a la base de datos
