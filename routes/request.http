@@ -1,0 +1,29 @@
+POST  http://localhost:3001/api/log HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "mari@gmail.com", 
+    "contrasenia": "12345",
+    "rol": "Cliente", 
+    "Nombre": "Mariana", 
+    "Ape1": "Marcelino", 
+    "Ape2": "Bautista", 
+    "Telefono": "5539492048", 
+    "CURP": "CUPRMARY" 
+}
+
+
+###
+
+POST  http://localhost:3001/api/log/validar HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "mari@gmail.com", 
+    "contrasenia": "12345"
+}
+
+
+###
+GET  http://localhost:3001/api/rol HTTP/1.1
+

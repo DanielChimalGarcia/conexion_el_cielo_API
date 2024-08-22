@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 
 const dbConfig = {
-  host: "buhymhakbwai119kskrw-mysql.services.clever-cloud.com",
-  user: "ux2q0dywdexzvkun",
-  password: "ZYqt2Ils1oUdDUdIbCDw",
-  database: "buhymhakbwai119kskrw",
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "el_cielo3",
 };
 
 const pool = mysql.createPool(dbConfig);

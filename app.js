@@ -25,12 +25,14 @@ app.use("/api/signout", require("./routes/signout"));
 app.use("/api/check-auth", require("./routes/checkAuth"));
 app.use("/api/imagescabana/post", require("./routes/uploadImage"));
 app.use("/api/imagescabana/get", require("./routes/getimage"));
+app.use("/api/log", require("./routes/log"));
+app.use("/api/rol", require("./routes/rol"));
 // Configura la conexión a MySQL
 const db = mysql.createConnection({
-  host: "buhymhakbwai119kskrw-mysql.services.clever-cloud.com",
-  user: "ux2q0dywdexzvkun",
-  password: "ZYqt2Ils1oUdDUdIbCDw",
-  database: "buhymhakbwai119kskrw",
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "el_cielo3",
 });
 
 // Conéctate a la base de datos
@@ -52,7 +54,7 @@ app.get("/api/:consulta", (req, res) => {
   //console.log(`esto esta aqui ${sql}`);
   db.query(sql, (err, result) => {
     if (err) {
-      console.error("Error al ejecutar la consulta: " + err.message);
+      console.error("Error al ejecutar la consulta: "+sql + err.message);
       res.status(500).send("Error del servidor");
     } else {
       res.json(result); // Devolvemos solo el primer resultado
